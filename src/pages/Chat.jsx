@@ -6,14 +6,14 @@ const Chat = () => {
     const { id } = useParams();
     const [searchParams, setSearchParams] = useSearchParams();
     const [messages, setMessages] = useState([
-        { id: 1, text: "Olá! Ainda tem este artigo disponível?", sender: "me", time: "10:30" },
-        { id: 2, text: "Sim, ainda tenho 50 metros disponíveis. Precisa de tudo?", sender: "seller", time: "10:32" }
+        { id: 1, text: "Hello! Is this item still available?", sender: "me", time: "10:30" },
+        { id: 2, text: "Yes, I still have 50 meters available. Do you need all of it?", sender: "seller", time: "10:32" }
     ]);
     const [newMessage, setNewMessage] = useState("");
     const [offerAmount, setOfferAmount] = useState("");
     const [offerQuantity, setOfferQuantity] = useState("1"); // Default quantity
     const [showOfferModal, setShowOfferModal] = useState(false);
-    const [modalTitle, setModalTitle] = useState("Fazer Oferta");
+    const [modalTitle, setModalTitle] = useState("Make Offer");
 
     useEffect(() => {
         if (searchParams.get('action') === 'offer') {
@@ -28,7 +28,7 @@ const Chat = () => {
     // Mock Product Data (In a real app, fetch based on ID)
     const product = {
         id: id || 1,
-        title: "Pele Preta Premium 50M",
+        title: "Black Leather Premium 50M",
         price: "38.50€",
         image: "/imagens/Produto_1.jpg",
         seller: "EcoTextil Lda"
@@ -38,8 +38,8 @@ const Chat = () => {
     useEffect(() => {
         if (isSellerContext) {
             setMessages([
-                { id: 1, text: `Olá! Gostaria de falar com ${product.seller}.`, sender: "me", time: "10:30" },
-                { id: 2, text: "Olá! Em que posso ajudar?", sender: "seller", time: "10:32" }
+                { id: 1, text: `Hello! I would like to speak with ${product.seller}.`, sender: "me", time: "10:30" },
+                { id: 2, text: "Hello! How can I help?", sender: "seller", time: "10:32" }
             ]);
         }
         // else keep default or fetch product messages
@@ -66,7 +66,7 @@ const Chat = () => {
 
         const msg = {
             id: messages.length + 1,
-            text: `Oferta enviada: ${offerAmount}€ por ${offerQuantity} unidade(s)`,
+            text: `Offer sent: ${offerAmount}€ for ${offerQuantity} unit(s)`,
             isOffer: true,
             amount: offerAmount,
             quantity: offerQuantity,
@@ -89,8 +89,8 @@ const Chat = () => {
                         <ChevronLeft size={20} className="text-[#355130]" />
                     </Link>
                     <div className="flex-1">
-                        <h1 className="text-lg font-bold text-[#355130]">Chat com {product.seller}</h1>
-                        {!isSellerContext && <p className="text-xs text-gray-500 truncate">Referente a: {product.title}</p>}
+                        <h1 className="text-lg font-bold text-[#355130]">Chat with {product.seller}</h1>
+                        {!isSellerContext && <p className="text-xs text-gray-500 truncate">Regarding: {product.title}</p>}
                     </div>
                 </div>
 
@@ -98,11 +98,11 @@ const Chat = () => {
                 <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-4 flex items-start gap-3">
                     <AlertTriangle size={20} className="text-amber-500 flex-shrink-0 mt-0.5" />
                     <div>
-                        <h4 className="text-sm font-bold text-amber-800">Aviso de Segurança</h4>
+                        <h4 className="text-sm font-bold text-amber-800">Security Warning</h4>
                         <p className="text-xs text-amber-700">
-                            Para sua segurança, combine o pagamento e envio diretamente com o vendedor.
-                            <span className="font-bold"> A plataforma não processa pagamentos.</span>
-                            Desconfie de pedidos de pagamento adiantado sem garantias.
+                            For your safety, arrange payment and shipping directly with the seller.
+                            <span className="font-bold"> The platform does not process payments.</span>
+                            Be wary of advanced payment requests without guarantees.
                         </p>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ const Chat = () => {
                                                 <DollarSign size={20} className="text-white" />
                                             </div>
                                             <div>
-                                                <p className="font-bold text-sm">Oferta de Preço</p>
+                                                <p className="font-bold text-sm">Price Offer</p>
                                                 <p className="text-lg font-bold">{msg.amount}€ <span className="text-xs font-normal text-white/70">x {msg.quantity || 1}</span></p>
                                             </div>
                                         </div>
@@ -144,18 +144,18 @@ const Chat = () => {
                         {!isSellerContext && (
                             <div className="flex gap-2">
                                 <button
-                                    onClick={() => { setShowOfferModal(true); setModalTitle("Fazer Oferta"); }}
+                                    onClick={() => { setShowOfferModal(true); setModalTitle("Make Offer"); }}
                                     className="px-4 py-3 rounded-full bg-[#C9E26C] hover:bg-[#D4E680] text-[#355130] font-bold transition-colors btn-press flex items-center gap-2 whitespace-nowrap"
                                 >
                                     <DollarSign size={20} />
-                                    Fazer Oferta
+                                    Make Offer
                                 </button>
                                 <button
-                                    onClick={() => { setShowOfferModal(true); setModalTitle("Fazer Contra-proposta"); }} // reusing modal for demo
+                                    onClick={() => { setShowOfferModal(true); setModalTitle("Counter Offer"); }} // reusing modal for demo
                                     className="px-4 py-3 rounded-full bg-white border-2 border-[#C9E26C] text-[#355130] font-bold transition-colors btn-press flex items-center gap-2 whitespace-nowrap hover:bg-[#C9E26C]/20"
                                 >
                                     <DollarSign size={20} />
-                                    Contra-proposta
+                                    Counter Offer
                                 </button>
                             </div>
                         )}
@@ -164,7 +164,7 @@ const Chat = () => {
                                 type="text"
                                 value={newMessage}
                                 onChange={(e) => setNewMessage(e.target.value)}
-                                placeholder="Escreva uma mensagem..."
+                                placeholder="Type a message..."
                                 className="flex-1 bg-white border border-gray-200 rounded-full px-4 py-3 focus:outline-none focus:border-[#355130] focus:ring-1 focus:ring-[#355130] transition-all"
                             />
                             <button
@@ -180,13 +180,13 @@ const Chat = () => {
                     {showOfferModal && (
                         <div className="absolute inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
                             <div className="bg-white rounded-[30px] p-6 w-full max-w-sm shadow-2xl animate-in zoom-in-95 duration-200">
-                                <h3 className="text-lg font-bold text-[#355130] mb-2">Fazer Oferta</h3>
-                                <p className="text-sm text-gray-500 mb-4">Proponha um novo preço para este artigo. O preço atual é {product.price}.</p>
+                                <h3 className="text-lg font-bold text-[#355130] mb-2">Make Offer</h3>
+                                <p className="text-sm text-gray-500 mb-4">Propose a new price for this item. Current price is {product.price}.</p>
 
                                 <form onSubmit={handleSendOffer}>
                                     <div className="flex gap-4 mb-6">
                                         <div className="flex-1">
-                                            <label className="block text-xs font-bold text-gray-500 mb-1">Preço Proposto</label>
+                                            <label className="block text-xs font-bold text-gray-500 mb-1">Proposed Price</label>
                                             <div className="relative">
                                                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-bold">€</span>
                                                 <input
@@ -201,7 +201,7 @@ const Chat = () => {
                                             </div>
                                         </div>
                                         <div className="w-1/3">
-                                            <label className="block text-xs font-bold text-gray-500 mb-1">Qtd.</label>
+                                            <label className="block text-xs font-bold text-gray-500 mb-1">Qty</label>
                                             <input
                                                 type="number"
                                                 min="1"
@@ -218,13 +218,13 @@ const Chat = () => {
                                             onClick={() => setShowOfferModal(false)}
                                             className="flex-1 py-3 rounded-xl border border-gray-200 font-bold text-gray-500 hover:bg-gray-50 transition-colors"
                                         >
-                                            Cancelar
+                                            Cancel
                                         </button>
                                         <button
                                             type="submit"
                                             className="flex-1 py-3 rounded-xl bg-[#355130] text-white font-bold hover:bg-[#2a4126] transition-colors shadow-lg"
                                         >
-                                            Enviar Oferta
+                                            Send Offer
                                         </button>
                                     </div>
                                 </form>

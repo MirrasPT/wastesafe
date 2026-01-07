@@ -9,18 +9,18 @@ const About = () => {
                 {/* Hero Section */}
                 <div className="text-center max-w-4xl mx-auto mb-20">
                     <span className="inline-block py-1 px-3 rounded-full bg-[#C9E26C]/20 text-[#355130] text-sm font-bold mb-4">
-                        A Nossa Missão
+                        Our Mission
                     </span>
                     <h1 className="text-4xl md:text-6xl font-bold text-[#355130] mb-6 leading-tight">
-                        Transformamos o desperdício têxtil em <span className="relative inline-block">
-                            oportunidade
+                        We transform textile waste into <span className="relative inline-block">
+                            opportunity
                             <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#F6EA37] -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
                             </svg>
                         </span>.
                     </h1>
                     <p className="text-gray-500 text-lg md:text-xl leading-relaxed">
-                        A WasteSafe nasceu para fechar o ciclo da indústria têxtil, ligando excedentes industriais a criativos e empresas que lhes dão uma nova vida.
+                        WasteSafe was born to close the loop in the textile industry, connecting industrial surplus with creatives and companies that give them a new life.
                     </p>
                 </div>
 
@@ -33,7 +33,7 @@ const About = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-8 md:p-12">
                         <p className="text-white text-xl md:text-2xl font-bold max-w-2xl">
-                            "Não existe lixo, apenas recursos no lugar errado."
+                            "There is no waste, only resources in the wrong place."
                         </p>
                     </div>
                 </div>
@@ -43,18 +43,18 @@ const About = () => {
                     {[
                         {
                             icon: Recycle,
-                            title: "Economia Circular",
-                            text: "Promovemos a reutilização de materiais, reduzindo a necessidade de novas matérias-primas e a extração de recursos naturais."
+                            title: "Circular Economy",
+                            text: "We promote the reuse of materials, reducing the need for virgin raw materials and natural resource extraction."
                         },
                         {
                             icon: Globe,
-                            title: "Impacto Positivo",
-                            text: "Cada metro de tecido salvo é menos água gasta, menos CO2 emitido e menos resíduos em aterros sanitários."
+                            title: "Positive Impact",
+                            text: "Every meter of fabric saved is less water used, less CO2 emitted, and less waste in landfills."
                         },
                         {
                             icon: Users,
-                            title: "Comunidade",
-                            text: "Impulsionamos uma rede de designers, artesãos e pequenas marcas que valorizam a sustentabilidade e a qualidade."
+                            title: "Community",
+                            text: "We empower a network of designers, artisans, and small brands that value sustainability and quality."
                         }
                     ].map((item, idx) => (
                         <div key={idx} className="bg-white p-8 rounded-[30px] border border-gray-100 hover:border-[#355130]/30 transition-all hover:shadow-lg group">
@@ -79,23 +79,23 @@ const About = () => {
                     </div>
 
                     <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">O Problema do Desperdício</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">The Waste Problem</h2>
                         <div className="space-y-6 text-white/80 text-lg">
                             <p>
-                                A indústria têxtil é uma das mais poluentes do mundo. Todos os anos, toneladas de sobras de produção, rolos com pequenos defeitos e fins de coleção são descartados ou incinerados.
+                                The textile industry is one of the most polluting in the world. Every year, tons of production leftovers, rolls with minor defects, and end-of-collection items are discarded or incinerated.
                             </p>
                             <p>
-                                Estes materiais estão novos, prontos a usar e cheios de potencial. É aqui que entramos.
+                                These materials are new, ready to use, and full of potential. That's where we come in.
                             </p>
                         </div>
                         <div className="flex gap-4 mt-8">
                             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/20">
                                 <span className="block text-3xl font-bold text-[#F6EA37]">92M</span>
-                                <span className="text-sm">Toneladas de lixo têxtil/ano</span>
+                                <span className="text-sm">Tons of textile waste/year</span>
                             </div>
                             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/20">
                                 <span className="block text-3xl font-bold text-[#F6EA37]">&lt;1%</span>
-                                <span className="text-sm">Reciclado em nova roupa</span>
+                                <span className="text-sm">Recycled into new clothing</span>
                             </div>
                         </div>
                     </div>
@@ -103,14 +103,14 @@ const About = () => {
                     <div className="relative z-10 lg:pl-12">
                         <div className="bg-white text-[#355130] p-8 rounded-[30px] shadow-xl">
                             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                                <ShieldCheck className="text-[#355130]" /> A Solução WasteSafe
+                                <ShieldCheck className="text-[#355130]" /> The WasteSafe Solution
                             </h3>
                             <ul className="space-y-4">
                                 {[
-                                    "Plataforma digital simples e transparente",
-                                    "Verificação de qualidade de vendedores",
-                                    "Logística facilitada entre empresas",
-                                    "Rastreabilidade do impacto ambiental"
+                                    "Simple and transparent digital platform",
+                                    "Seller quality verification",
+                                    "Facilitated logistics between companies",
+                                    "Environmental impact traceability"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 font-medium">
                                         <div className="w-6 h-6 rounded-full bg-[#C9E26C] flex items-center justify-center flex-shrink-0 text-xs font-bold text-[#355130]">✓</div>
@@ -119,7 +119,7 @@ const About = () => {
                                 ))}
                             </ul>
                             <Link to="/registar" className="mt-8 w-full bg-[#355130] text-white py-3 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-[#2a4126] transition-colors">
-                                Juntar-me ao Movimento <ArrowRight size={18} />
+                                Join the Movement <ArrowRight size={18} />
                             </Link>
                         </div>
                     </div>
@@ -127,16 +127,16 @@ const About = () => {
 
                 {/* Team / Contact CTA */}
                 <div className="text-center max-w-2xl mx-auto">
-                    <h2 className="text-3xl font-bold text-[#355130] mb-4">Pronto para fazer a diferença?</h2>
+                    <h2 className="text-3xl font-bold text-[#355130] mb-4">Ready to make a difference?</h2>
                     <p className="text-gray-500 mb-8">
-                        Seja uma fábrica com excedentes ou um criador à procura de materiais únicos, o seu lugar é aqui.
+                        Whether you are a factory with surplus or a creator looking for unique materials, you belong here.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link to="/catalogo" className="bg-[#C9E26C] text-[#355130] px-8 py-3 rounded-full font-bold hover:brightness-105 transition-all">
-                            Ver Catálogo
+                            View Catalog
                         </Link>
                         <Link to="/registar" className="bg-white text-[#355130] border-2 border-[#355130]/10 px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition-all">
-                            Criar Conta Gratuita
+                            Create Free Account
                         </Link>
                     </div>
                 </div>

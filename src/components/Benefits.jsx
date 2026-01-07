@@ -3,22 +3,22 @@ import { Leaf, Lock, Settings } from 'lucide-react';
 const Benefits = () => {
     const benefits = [
         {
-            title: "Economia Circular",
-            text: "Reduza o desperdício dando uma nova vida a excedentes e materiais parados no seu armazém.",
+            title: "Circular Economy",
+            text: "Reduce waste by giving a new life to surplus and materials sitting in your warehouse.",
             Icon: Leaf,
             iconBg: "bg-[#C9E26C]", // Light Green
             iconColor: "text-[#355130]"
         },
         {
-            title: "Negócio Seguro",
-            text: "Perfis verificados e sistema de chat integrado para negociações transparentes e fiáveis.",
+            title: "Secure Business",
+            text: "Verified profiles and integrated chat system for transparent and reliable negotiations.",
             Icon: Lock,
             iconBg: "bg-[#355130]", // Dark Green
             iconColor: "text-[#C9E26C]"
         },
         {
-            title: "Gestão Simples",
-            text: "Organize o seu \"Armazém Digital\", receba alertas de expiração e venda mais rápido.",
+            title: "Simple Management",
+            text: "Organize your \"Digital Warehouse\", receive expiration alerts, and sell faster.",
             Icon: Settings,
             iconBg: "bg-[#F6EA37]", // Yellow
             iconColor: "text-[#355130]"
@@ -30,10 +30,10 @@ const Benefits = () => {
             <div className="waste-container relative">
                 <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                     <h2 className="text-5xl md:text-7xl font-bold text-[#355130]">
-                        Porquê usar a <br /> WasteSafe?
+                        Why use <br /> WasteSafe?
                     </h2>
                     <p className="text-[#355130]/80 text-lg md:text-xl font-normal max-w-lg mx-auto leading-relaxed">
-                        Conectamos empresas para criar uma indústria têxtil mais sustentável e eficiente.
+                        We connect companies to create a more sustainable and efficient textile industry.
                     </p>
                 </div>
 

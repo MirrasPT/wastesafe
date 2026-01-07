@@ -10,13 +10,13 @@ const HowToSell = () => {
                 <div className="bg-[#355130] rounded-[50px] p-8 md:p-16 mb-20 relative overflow-hidden text-center text-white">
                     <div className="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                     <div className="relative z-10 max-w-3xl mx-auto">
-                        <span className="bg-[#C9E26C] text-[#355130] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-6 inline-block">Guia do Vendedor</span>
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6">Como Vender na WasteSafe?</h1>
+                        <span className="bg-[#C9E26C] text-[#355130] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-6 inline-block">Seller's Guide</span>
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6">How to Sell on WasteSafe?</h1>
                         <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed">
-                            Transforme os seus excedentes têxteis em lucro em poucos passos simples. Um processo transparente, seguro e eficiente.
+                            Turn your textile surplus into profit in a few simple steps. A transparent, secure, and efficient process.
                         </p>
                         <Link to="/publicar" className="bg-[#F6EA37] text-[#355130] px-10 py-4 rounded-full font-bold text-lg transition-colors inline-flex items-center gap-2 btn-press">
-                            Começar a Vender <ArrowRight size={24} />
+                            Start Selling <ArrowRight size={24} />
                         </Link>
                     </div>
                 </div>
@@ -26,26 +26,26 @@ const HowToSell = () => {
                     {[
                         {
                             icon: Upload,
-                            title: "1. Publique",
-                            desc: "Tire fotos claras, descreva o produto e defina o preço. É rápido e fácil.",
+                            title: "1. Post",
+                            desc: "Take clear photos, describe the product, and set the price. It's quick and easy.",
                             color: "bg-blue-100 text-blue-600"
                         },
                         {
                             icon: MessageSquare,
-                            title: "2. Negocie",
-                            desc: "Responda a interessados através do nosso chat seguro e cheguem a acordo.",
+                            title: "2. Negotiate",
+                            desc: "Reply to interested parties via our secure chat and reach an agreement.",
                             color: "bg-orange-100 text-orange-600"
                         },
                         {
                             icon: Truck,
-                            title: "3. Envie",
-                            desc: "Prepare a encomenda e envie conforme o método acordado com o comprador.",
+                            title: "3. Ship",
+                            desc: "Prepare the order and ship according to the method agreed with the buyer.",
                             color: "bg-purple-100 text-purple-600"
                         },
                         {
                             icon: DollarSign,
-                            title: "4. Receba",
-                            desc: "Receba o pagamento de forma segura assim que a entrega for confirmada.",
+                            title: "4. Receive",
+                            desc: "Receive payment securely once delivery is confirmed.",
                             color: "bg-green-100 text-green-600"
                         }
                     ].map((step, i) => (
@@ -63,12 +63,12 @@ const HowToSell = () => {
                 <div className="bg-white rounded-[50px] p-8 md:p-16 border border-gray-100 mb-20 relative overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-bold text-[#355130] mb-8">Porquê escolher a WasteSafe?</h2>
+                            <h2 className="text-3xl md:text-5xl font-bold text-[#355130] mb-8">Why choose WasteSafe?</h2>
                             <ul className="space-y-6">
                                 {[
-                                    { title: "Alcance Especializado", desc: "A sua mercadoria exposta a milhares de profissionais do setor têxtil." },
-                                    { title: "Pagamentos Seguros", desc: "Sistema de retenção de valor até confirmação de entrega." },
-                                    { title: "Gestão Simplificada", desc: "Painel de controlo intuitivo para gerir stocks e encomendas." },
+                                    { title: "Specialized Reach", desc: "Your merchandise exposed to thousands of textile industry professionals." },
+                                    { title: "Secure Payments", desc: "Value retention system until delivery confirmation." },
+                                    { title: "Simplified Management", desc: "Intuitive dashboard to manage stock and orders." },
                                 ].map((item, i) => (
                                     <li key={i} className="flex gap-4">
                                         <div className="mt-1">
@@ -90,7 +90,7 @@ const HowToSell = () => {
                                         <Package className="text-[#355130]" />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-gray-500">Total Vendido</p>
+                                        <p className="text-sm text-gray-500">Total Sold</p>
                                         <p className="text-2xl font-bold text-[#355130]">+ 1.2M €</p>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@ const HowToSell = () => {
                                         <Shield className="text-[#355130]" />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-gray-500">Taxa de Sucesso</p>
+                                        <p className="text-sm text-gray-500">Success Rate</p>
                                         <p className="text-2xl font-bold text-[#355130]">99.8%</p>
                                     </div>
                                 </div>
@@ -110,13 +110,13 @@ const HowToSell = () => {
 
                 {/* Call to Action */}
                 <div className="text-center">
-                    <h2 className="text-3xl font-bold text-[#355130] mb-6">Pronto para começar?</h2>
+                    <h2 className="text-3xl font-bold text-[#355130] mb-6">Ready to start?</h2>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link to="/publicar" className="bg-[#355130] text-white px-8 py-4 rounded-full font-bold hover:bg-[#2a4126] transition-all btn-press">
-                            Publicar Primeiro Anúncio
+                            Post First Ad
                         </Link>
                         <Link to="/subscricoes" className="bg-white text-[#355130] px-8 py-4 rounded-full font-bold border border-gray-200 hover:bg-gray-50 transition-all btn-press">
-                            Ver Planos de Subscrição
+                            View Subscription Plans
                         </Link>
                     </div>
                 </div>

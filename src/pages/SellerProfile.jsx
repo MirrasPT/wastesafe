@@ -12,17 +12,17 @@ const SellerProfile = () => {
     const seller = {
         id: id || 1,
         name: "EcoTextil Lda",
-        type: "Empresa", // or User
+        type: "Company", // or User
         rating: 4.8,
         reviewsCount: 124,
         verified: true,
-        joinDate: "Janeiro 2023",
+        joinDate: "January 2023",
         location: "Porto, Portugal",
-        description: "Empresa têxtil familiar dedicada à sustentabilidade. Vendemos excedentes de produção de alta qualidade, desde peles a tecidos técnicos. O nosso objetivo é reduzir o desperdício têxtil em Portugal.",
+        description: "Family textile company dedicated to sustainability. We sell high-quality production surpluses, from leather to technical fabrics. Our goal is to reduce textile waste in Portugal.",
         stats: {
             sold: 1450,
             active: 42,
-            responseProps: "Responde em 1h"
+            responseProps: "Replies in 1h"
         }
     };
 
@@ -38,12 +38,12 @@ const SellerProfile = () => {
 
     // Mock Seller Products
     const allProducts = [
-        { id: 1, title: "Pele Preta 50M", price: "38.50€", category: "Pele", quality: "Alta", condition: "Novo", certificates: ["GOTS"], image: "/imagens/Produto_1.jpg" },
-        { id: 2, title: "Tecido Rosa", price: "12.00€", category: "Estampado", quality: "Média", condition: "Usado", certificates: [], image: "/imagens/Produto_2.jpg" },
-        { id: 3, title: "Tecido Azul", price: "8.90€", category: "Sintético", quality: "Baixa", condition: "Com Defeito", certificates: [], image: "/imagens/Produto_3.jpg" },
-        { id: 4, title: "Rolos Diversos", price: "24.50€", category: "Misto", quality: "Média", condition: "Novo", certificates: ["GOTS", "Oeko-Tex"], image: "/imagens/Produto_4.jpg" },
-        { id: 5, title: "Algodão Branco", price: "15.00€", category: "Algodão", quality: "Alta", condition: "Novo", certificates: ["Oeko-Tex"], image: "/imagens/Produto_1.jpg" },
-        { id: 6, title: "Linho Natural", price: "22.00€", category: "Linho", quality: "Alta", condition: "Usado", certificates: [], image: "/imagens/Produto_2.jpg" },
+        { id: 1, title: "Black Leather 50M", price: "38.50€", category: "Leather", quality: "High", condition: "New", certificates: ["GOTS"], image: "/imagens/Produto_1.jpg" },
+        { id: 2, title: "Pink Fabric", price: "12.00€", category: "Printed", quality: "Medium", condition: "Used", certificates: [], image: "/imagens/Produto_2.jpg" },
+        { id: 3, title: "Blue Fabric", price: "8.90€", category: "Synthetic", quality: "Low", condition: "Defective", certificates: [], image: "/imagens/Produto_3.jpg" },
+        { id: 4, title: "Various Rolls", price: "24.50€", category: "Mixed", quality: "Medium", condition: "New", certificates: ["GOTS", "Oeko-Tex"], image: "/imagens/Produto_4.jpg" },
+        { id: 5, title: "White Cotton", price: "15.00€", category: "Cotton", quality: "High", condition: "New", certificates: ["Oeko-Tex"], image: "/imagens/Produto_1.jpg" },
+        { id: 6, title: "Natural Linen", price: "22.00€", category: "Linen", quality: "High", condition: "Used", certificates: [], image: "/imagens/Produto_2.jpg" },
     ];
 
     // Simple Filtering Logic
@@ -60,9 +60,9 @@ const SellerProfile = () => {
     }, [activeFilters]);
 
     const reviews = [
-        { id: 1, user: "Ana M.", rating: 5, date: "2 dias atrás", text: "Excelente qualidade da pele! O envio foi muito rápido. Recomendo vivamente." },
-        { id: 2, user: "Carlos S.", rating: 5, date: "1 semana atrás", text: "Tudo conforme descrito. Vendedor muito atencioso." },
-        { id: 3, user: "Beatriz L.", rating: 4, date: "2 semanas atrás", text: "O tecido é ótimo, mas a cor é ligeiramente diferente da foto." },
+        { id: 1, user: "Ana M.", rating: 5, date: "2 days ago", text: "Excellent leather quality! Shipping was very fast. Highly recommend." },
+        { id: 2, user: "Carlos S.", rating: 5, date: "1 week ago", text: "Everything as described. Very attentive seller." },
+        { id: 3, user: "Beatriz L.", rating: 4, date: "2 weeks ago", text: "The fabric is great, but the color is slightly different from the photo." },
     ];
 
     const toggleFilter = (type, value) => {
@@ -102,20 +102,20 @@ const SellerProfile = () => {
                                     </h1>
                                     <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
                                         <span className="flex items-center gap-1 text-amber-500 font-bold bg-gray-50 px-2 py-1 rounded-full">
-                                            <Star size={14} fill="currentColor" /> {seller.rating} ({seller.reviewsCount} avaliações)
+                                            <Star size={14} fill="currentColor" /> {seller.rating} ({seller.reviewsCount} reviews)
                                         </span>
                                         <span className="flex items-center gap-1">
                                             <MapPin size={16} /> {seller.location}
                                         </span>
                                         <span className="flex items-center gap-1">
-                                            <Calendar size={16} /> Membro desde {seller.joinDate}
+                                            <Calendar size={16} /> Member since {seller.joinDate}
                                         </span>
                                     </div>
                                 </div>
                                 <div className="flex gap-3">
                                     <Link to={`/chat/${seller.id}?context=seller`} className="flex-1 md:flex-none px-6 py-3 bg-[#355130] hover:bg-[#2a4126] text-white rounded-full font-bold shadow-lg transition-transform hover:scale-105 flex items-center justify-center gap-2">
                                         <MessageCircle size={18} />
-                                        Contactar
+                                        Contact
                                     </Link>
                                 </div>
                             </div>
@@ -128,17 +128,17 @@ const SellerProfile = () => {
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                 <div className="bg-gray-50 p-3 rounded-2xl border border-gray-100 text-center">
                                     <span className="block text-2xl font-bold text-[#355130]">{seller.stats.sold}</span>
-                                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Vendas</span>
+                                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Sales</span>
                                 </div>
                                 <div className="bg-gray-50 p-3 rounded-2xl border border-gray-100 text-center">
                                     <span className="block text-2xl font-bold text-[#355130]">{seller.stats.active}</span>
-                                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Produtos</span>
+                                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Products</span>
                                 </div>
                                 <div className="bg-gray-50 p-3 rounded-2xl border border-gray-100 text-center">
                                     <span className="block text-2xl font-bold text-[#355130] flex items-center justify-center gap-1">
                                         {seller.rating} <Star size={16} fill="currentColor" className="text-amber-500" />
                                     </span>
-                                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Avaliação Média</span>
+                                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Average Rating</span>
                                 </div>
                             </div>
                         </div>
@@ -151,14 +151,14 @@ const SellerProfile = () => {
                         onClick={() => setActiveTab('products')}
                         className={`pb-4 text-lg font-bold transition-colors relative ${activeTab === 'products' ? 'text-[#355130]' : 'text-gray-400 hover:text-gray-600'}`}
                     >
-                        Produtos à Venda ({PRODUCTS.length})
+                        Products for Sale ({PRODUCTS.length})
                         {activeTab === 'products' && <div className="absolute bottom-0 left-0 w-full h-1 bg-[#F6EA37] rounded-full" />}
                     </button>
                     <button
                         onClick={() => setActiveTab('reviews')}
                         className={`pb-4 text-lg font-bold transition-colors relative ${activeTab === 'reviews' ? 'text-[#355130]' : 'text-gray-400 hover:text-gray-600'}`}
                     >
-                        Avaliações
+                        Reviews
                         {activeTab === 'reviews' && <div className="absolute bottom-0 left-0 w-full h-1 bg-[#F6EA37] rounded-full" />}
                     </button>
                 </div>
@@ -175,7 +175,7 @@ const SellerProfile = () => {
                                     <Search size={20} className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                                     <input
                                         type="text"
-                                        placeholder="Pesquisar nesta loja..."
+                                        placeholder="Search in this store..."
                                         className="w-full pl-12 pr-4 py-3 bg-white rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20"
                                     />
                                 </div>
@@ -183,7 +183,7 @@ const SellerProfile = () => {
                                     onClick={() => setShowFilters(!showFilters)}
                                     className={`flex items-center gap-2 font-bold px-6 py-3 rounded-full border transition-colors ${showFilters ? 'bg-[#355130] text-white border-[#355130]' : 'bg-white text-[#355130] border-gray-200 hover:bg-gray-50'}`}
                                 >
-                                    <Filter size={18} /> Filtros
+                                    <Filter size={18} /> Filters
                                 </button>
                             </div>
 
@@ -192,9 +192,9 @@ const SellerProfile = () => {
                                 <div className="bg-white p-6 rounded-[20px] shadow-sm border border-gray-100 animate-in slide-in-from-top-2 duration-200">
                                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                                         <div>
-                                            <h4 className="font-bold text-[#355130] mb-3 text-sm">Categorias</h4>
+                                            <h4 className="font-bold text-[#355130] mb-3 text-sm">Categories</h4>
                                             <div className="space-y-2">
-                                                {['Pele', 'Estampado', 'Sintético', 'Algodão', 'Linho', 'Misto'].map(cat => (
+                                                {['Leather', 'Printed', 'Synthetic', 'Cotton', 'Linen', 'Mixed'].map(cat => (
                                                     <label key={cat} className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer hover:text-[#355130]">
                                                         <input
                                                             type="checkbox"
@@ -208,10 +208,10 @@ const SellerProfile = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-[#355130] mb-3 text-sm">Qualidade & Condição</h4>
+                                            <h4 className="font-bold text-[#355130] mb-3 text-sm">Quality & Condition</h4>
                                             <div className="space-y-2">
-                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Qualidade</p>
-                                                {['Alta', 'Média', 'Baixa'].map(q => (
+                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Quality</p>
+                                                {['High', 'Medium', 'Low'].map(q => (
                                                     <label key={q} className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer hover:text-[#355130]">
                                                         <input
                                                             type="checkbox"
@@ -222,8 +222,8 @@ const SellerProfile = () => {
                                                         {q}
                                                     </label>
                                                 ))}
-                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mt-3 mb-1">Condição</p>
-                                                {['Novo', 'Usado', 'Com Defeito'].map(cond => (
+                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mt-3 mb-1">Condition</p>
+                                                {['New', 'Used', 'Defective'].map(cond => (
                                                     <label key={cond} className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer hover:text-[#355130]">
                                                         <input
                                                             type="checkbox"
@@ -237,7 +237,7 @@ const SellerProfile = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-[#355130] mb-3 text-sm">Certificações</h4>
+                                            <h4 className="font-bold text-[#355130] mb-3 text-sm">Certifications</h4>
                                             <div className="space-y-2">
                                                 {['GOTS', 'Oeko-Tex', 'GRS'].map(cert => (
                                                     <label key={cert} className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer hover:text-[#355130]">
@@ -253,7 +253,7 @@ const SellerProfile = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-[#355130] mb-3 text-sm">Preço</h4>
+                                            <h4 className="font-bold text-[#355130] mb-3 text-sm">Price</h4>
                                             <div className="flex items-center gap-2 mb-4">
                                                 <input
                                                     type="number"
@@ -275,7 +275,7 @@ const SellerProfile = () => {
                                                 onClick={() => setActiveFilters({ categories: [], conditions: [], qualities: [], certificates: [], minPrice: '', maxPrice: '' })}
                                                 className="w-full text-sm font-bold text-gray-400 hover:text-[#355130] border border-gray-200 rounded-lg py-2 hover:bg-gray-50"
                                             >
-                                                Limpar Filtros
+                                                Clear Filters
                                             </button>
                                         </div>
                                     </div>
@@ -290,7 +290,7 @@ const SellerProfile = () => {
                         </div>
                         {PRODUCTS.length === 0 && (
                             <div className="text-center py-12 text-gray-500">
-                                Nenhum produto encontrado com estes filtros.
+                                No products found with these filters.
                             </div>
                         )}
                     </div>

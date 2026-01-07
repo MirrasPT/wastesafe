@@ -23,7 +23,7 @@ const PublishAd = () => {
         condition: '',
         certificates: [],
         partialSale: false,
-        shippingPolicy: 'A cargo do Comprador',
+        shippingPolicy: "Buyer's Responsibility",
         shippingCost: ''
     });
 
@@ -154,8 +154,8 @@ const PublishAd = () => {
                 >
                     <div className="pointer-events-none flex flex-col items-center">
                         <Upload className="w-24 h-24 mb-6" />
-                        <h2 className="text-4xl font-bold mb-2">Largue as imagens aqui</h2>
-                        <p className="text-xl opacity-80 mt-2">ou clique em qualquer lugar para selecionar</p>
+                        <h2 className="text-4xl font-bold mb-2">Drop images here</h2>
+                        <p className="text-xl opacity-80 mt-2">or click anywhere to select</p>
                     </div>
                 </div>
             )}
@@ -164,8 +164,8 @@ const PublishAd = () => {
                 <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-lg border border-gray-100 relative overflow-hidden transition-all duration-500 ease-in-out">
 
                     <div className="text-center mb-10">
-                        <h1 className="text-4xl font-bold text-[#355130] mb-3">Publicar Anúncio</h1>
-                        <p className="text-gray-500 text-lg">Dê uma nova vida aos seus excedentes têxteis.</p>
+                        <h1 className="text-4xl font-bold text-[#355130] mb-3">Publish Ad</h1>
+                        <p className="text-gray-500 text-lg">Give your textile surplus a new life.</p>
                     </div>
 
                     <form ref={parent} className="space-y-12" onSubmit={handleSubmit}>
@@ -175,18 +175,18 @@ const PublishAd = () => {
                         {/* Section 1: Basic Info (Always Visible) */}
                         <div className="space-y-6">
                             <h2 className="text-2xl font-bold text-[#355130] border-b border-gray-100 pb-4 flex items-center gap-3">
-                                1. Informação Básica
+                                1. Basic Information
                             </h2>
 
                             {/* Title */}
                             <div className="space-y-1">
-                                <label className="text-sm font-bold text-gray-700 ml-1">Título do Anúncio</label>
+                                <label className="text-sm font-bold text-gray-700 ml-1">Ad Title</label>
                                 <input
                                     type="text"
                                     name="title"
                                     value={formData.title}
                                     onChange={handleInputChange}
-                                    placeholder="Ex: Rolo de Algodão Orgânico 50m"
+                                    placeholder="Ex: Organic Cotton Roll 50m"
                                     className="w-full px-5 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium"
                                 />
                             </div>
@@ -194,7 +194,7 @@ const PublishAd = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {/* Price */}
                                 <div className="space-y-1">
-                                    <label className="text-sm font-bold text-gray-700 ml-1">Preço (€)</label>
+                                    <label className="text-sm font-bold text-gray-700 ml-1">Price (€)</label>
                                     <div className="relative">
                                         <DollarSign className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                                         <input
@@ -209,7 +209,7 @@ const PublishAd = () => {
                                 </div>
                                 {/* Location */}
                                 <div className="space-y-1">
-                                    <label className="text-sm font-bold text-gray-700 ml-1">Localização</label>
+                                    <label className="text-sm font-bold text-gray-700 ml-1">Location</label>
                                     <div className="relative">
                                         <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                                         <input
@@ -217,7 +217,7 @@ const PublishAd = () => {
                                             name="location"
                                             value={formData.location}
                                             onChange={handleInputChange}
-                                            placeholder="Cidade, País"
+                                            placeholder="City, Country"
                                             className="w-full pl-10 pr-4 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium"
                                         />
                                     </div>
@@ -225,13 +225,13 @@ const PublishAd = () => {
                             </div>
 
                             <div className="space-y-1">
-                                <label className="text-sm font-bold text-gray-700 ml-1">Descrição</label>
+                                <label className="text-sm font-bold text-gray-700 ml-1">Description</label>
                                 <textarea
                                     rows="4"
                                     name="description"
                                     value={formData.description}
                                     onChange={handleInputChange}
-                                    placeholder="Descreva o seu produto em detalhe..."
+                                    placeholder="Describe your product in detail..."
                                     className="w-full px-5 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium resize-none"
                                 ></textarea>
                             </div>
@@ -241,76 +241,76 @@ const PublishAd = () => {
                         {visibleSections.details && (
                             <div className="space-y-6">
                                 <h2 className="text-2xl font-bold text-[#355130] border-b border-gray-100 pb-4 flex items-center gap-3">
-                                    2. Detalhes do Produto
+                                    2. Product Details
                                 </h2>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {/* Type */}
                                     <div className="space-y-1">
-                                        <label className="text-sm font-bold text-gray-700 ml-1">Tipo de Produto</label>
+                                        <label className="text-sm font-bold text-gray-700 ml-1">Product Type</label>
                                         <select
                                             name="productType"
                                             value={formData.productType}
                                             onChange={handleInputChange}
                                             className="w-full px-5 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium text-gray-600 cursor-pointer appearance-none"
                                         >
-                                            <option value="" disabled>Selecione uma opção</option>
-                                            <option value="materia_prima">Matéria Prima</option>
-                                            <option value="resto_colecao">Resto de Coleção</option>
-                                            <option value="defeito">Peça com Defeito</option>
+                                            <option value="" disabled>Select an option</option>
+                                            <option value="materia_prima">Raw Material</option>
+                                            <option value="resto_colecao">Collection Leftover</option>
+                                            <option value="defeito">Defective Item</option>
                                         </select>
                                     </div>
 
                                     {/* Composition */}
                                     <div className="space-y-1">
-                                        <label className="text-sm font-bold text-gray-700 ml-1">Composição</label>
+                                        <label className="text-sm font-bold text-gray-700 ml-1">Composition</label>
                                         <input
                                             type="text"
                                             name="composition"
                                             value={formData.composition}
                                             onChange={handleInputChange}
-                                            placeholder="Ex: 100% Algodão"
+                                            placeholder="Ex: 100% Cotton"
                                             className="w-full px-5 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium"
                                         />
                                     </div>
 
                                     {/* Quality */}
                                     <div className="space-y-1">
-                                        <label className="text-sm font-bold text-gray-700 ml-1">Qualidade</label>
+                                        <label className="text-sm font-bold text-gray-700 ml-1">Quality</label>
                                         <select
                                             name="quality"
                                             value={formData.quality}
                                             onChange={handleInputChange}
                                             className="w-full px-5 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium text-gray-600 cursor-pointer appearance-none"
                                         >
-                                            <option value="" disabled>Selecione uma opção</option>
-                                            <option value="alta">Alta</option>
-                                            <option value="media">Média</option>
-                                            <option value="baixa">Baixa</option>
-                                            <option value="fim_vida">Fim de Vida</option>
+                                            <option value="" disabled>Select an option</option>
+                                            <option value="alta">High</option>
+                                            <option value="media">Medium</option>
+                                            <option value="baixa">Low</option>
+                                            <option value="fim_vida">End of Life</option>
                                         </select>
                                     </div>
 
                                     {/* Condition */}
                                     <div className="space-y-1">
-                                        <label className="text-sm font-bold text-gray-700 ml-1">Estado de Preservação</label>
+                                        <label className="text-sm font-bold text-gray-700 ml-1">Condition</label>
                                         <select
                                             name="condition"
                                             value={formData.condition}
                                             onChange={handleInputChange}
                                             className="w-full px-5 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium text-gray-600 cursor-pointer appearance-none"
                                         >
-                                            <option value="" disabled>Selecione uma opção</option>
-                                            <option value="novo">Novo</option>
-                                            <option value="usado">Usado</option>
-                                            <option value="com_defeito">Com Defeito</option>
+                                            <option value="" disabled>Select an option</option>
+                                            <option value="novo">New</option>
+                                            <option value="usado">Used</option>
+                                            <option value="com_defeito">Defective</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 {/* Certificates */}
                                 <div className="space-y-3">
-                                    <label className="text-sm font-bold text-gray-700 ml-1">Certificados</label>
+                                    <label className="text-sm font-bold text-gray-700 ml-1">Certificates</label>
                                     <div className="flex flex-wrap gap-3">
                                         {['GOTS', 'Oeko-Tex', 'GRS', 'Fair Trade', 'Better Cotton'].map((cert) => (
                                             <label key={cert} className="inline-flex items-center cursor-pointer select-none">
@@ -334,7 +334,7 @@ const PublishAd = () => {
                         {visibleSections.photos && (
                             <div className="space-y-4 transition-all duration-500">
                                 <label className="text-2xl font-bold text-[#355130] flex items-center gap-3">
-                                    3. Fotografias <span className="text-sm font-normal text-gray-400">(Obrigatório)</span>
+                                    3. Photos <span className="text-sm font-normal text-gray-400">(Required)</span>
                                 </label>
 
                                 <div
@@ -345,8 +345,8 @@ const PublishAd = () => {
                                         <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
                                             <Upload className="w-7 h-7 text-[#355130]" />
                                         </div>
-                                        <p className="mb-2 text-sm text-gray-500"><span className="font-semibold text-[#355130]">Clique para carregar</span> ou arraste e largue</p>
-                                        <p className="text-xs text-gray-400">Pode arrastar para qualquer lugar do ecrã</p>
+                                        <p className="mb-2 text-sm text-gray-500"><span className="font-semibold text-[#355130]">Click to upload</span> or drag and drop</p>
+                                        <p className="text-xs text-gray-400">You can drag anywhere on the screen</p>
                                     </div>
                                 </div>
 
@@ -374,14 +374,14 @@ const PublishAd = () => {
                         {visibleSections.shipping && (
                             <div className="space-y-6">
                                 <h2 className="text-2xl font-bold text-[#355130] border-b border-gray-100 pb-4 flex items-center gap-3">
-                                    4. Venda e Envio
+                                    4. Sale and Shipping
                                 </h2>
 
                                 {/* Allow Partial Sale */}
                                 <div className="flex items-center justify-between bg-gray-50 p-4 rounded-2xl border border-gray-100 hover:border-[#355130]/30 transition-colors">
                                     <div>
-                                        <h3 className="font-bold text-gray-700">Permitir Venda Parcial?</h3>
-                                        <p className="text-sm text-gray-500">Aceita vender apenas uma parte do lote.</p>
+                                        <h3 className="font-bold text-gray-700">Allow Partial Sale?</h3>
+                                        <p className="text-sm text-gray-500">Accept selling only a part of the lot.</p>
                                     </div>
                                     <label className="relative inline-flex items-center cursor-pointer">
                                         <input
@@ -398,22 +398,22 @@ const PublishAd = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {/* Shipping Policy */}
                                     <div className="space-y-1">
-                                        <label className="text-sm font-bold text-gray-700 ml-1">Política de Envio</label>
+                                        <label className="text-sm font-bold text-gray-700 ml-1">Shipping Policy</label>
                                         <select
                                             name="shippingPolicy"
                                             value={formData.shippingPolicy}
                                             onChange={handleInputChange}
                                             className="w-full px-5 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium text-gray-600 cursor-pointer appearance-none"
                                         >
-                                            <option>A cargo do Comprador</option>
-                                            <option>A cargo do Vendedor</option>
-                                            <option>A combinar</option>
+                                            <option>Buyer's Responsibility</option>
+                                            <option>Seller's Responsibility</option>
+                                            <option>To be agreed</option>
                                         </select>
                                     </div>
 
                                     {/* Shipping Cost */}
                                     <div className="space-y-1">
-                                        <label className="text-sm font-bold text-gray-700 ml-1">Custo de Transporte Estimado (€)</label>
+                                        <label className="text-sm font-bold text-gray-700 ml-1">Estimated Shipping Cost (€)</label>
                                         <div className="relative">
                                             <DollarSign className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                                             <input
@@ -434,7 +434,7 @@ const PublishAd = () => {
                         {visibleSections.submit && (
                             <div className="pt-4">
                                 <button type="submit" className="w-full bg-[#355130] hover:bg-[#2a4126] text-white py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 group">
-                                    Publicar Anúncio
+                                    Publish Ad
                                     <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </div>
@@ -460,20 +460,20 @@ const PublishAd = () => {
                             <div className="bg-[#F6EA37] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Zap size={40} className="text-[#355130]" />
                             </div>
-                            <h3 className="text-3xl font-bold text-[#355130] mb-2">Anúncio Quase Pronto!</h3>
-                            <p className="text-gray-500 font-medium">Turbine as suas vendas promovendo o seu anúncio.</p>
+                            <h3 className="text-3xl font-bold text-[#355130] mb-2">Ad Almost Ready!</h3>
+                            <p className="text-gray-500 font-medium">Boost your sales by promoting your ad.</p>
                         </div>
 
                         <div className="space-y-4 mb-8">
                             <div className="border-2 border-[#C9E26C] bg-[#FDFFE5] p-5 rounded-2xl flex items-center justify-between cursor-pointer relative shadow-md transform hover:scale-[1.02] transition-all">
-                                <div className="absolute -top-3 left-4 bg-[#355130] text-white text-[10px] font-bold px-3 py-1 rounded-full">Recomendado</div>
+                                <div className="absolute -top-3 left-4 bg-[#355130] text-white text-[10px] font-bold px-3 py-1 rounded-full">Recommended</div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border-2 border-[#355130] text-[#355130]">
                                         <Zap size={20} fill="#355130" />
                                     </div>
                                     <div>
-                                        <p className="font-bold text-[#355130] text-lg">Destaque Pro</p>
-                                        <p className="text-xs text-[#355130]/70">15 dias na Homepage</p>
+                                        <p className="font-bold text-[#355130] text-lg">Pro Highlight</p>
+                                        <p className="text-xs text-[#355130]/70">15 days on Homepage</p>
                                     </div>
                                 </div>
                                 <span className="font-bold text-2xl text-[#355130]">7,99€</span>
@@ -485,8 +485,8 @@ const PublishAd = () => {
                                         <ArrowRight size={20} />
                                     </div>
                                     <div>
-                                        <p className="font-bold text-gray-600 text-lg">Boost Rápido</p>
-                                        <p className="text-xs text-gray-400">7 dias no topo da categoria</p>
+                                        <p className="font-bold text-gray-600 text-lg">Quick Boost</p>
+                                        <p className="text-xs text-gray-400">7 days at top of category</p>
                                     </div>
                                 </div>
                                 <span className="font-bold text-xl text-gray-600">4,99€</span>
@@ -495,17 +495,17 @@ const PublishAd = () => {
 
                         <div className="flex flex-col gap-3">
                             <button
-                                onClick={() => { setShowPromoteModal(false); alert('Redirecionando para pagamento...'); navigate('/perfil'); }}
+                                onClick={() => { setShowPromoteModal(false); alert('Redirecting to payment...'); navigate('/perfil'); }}
                                 className="w-full bg-[#355130] text-white py-4 rounded-full font-bold text-lg hover:bg-[#2a4126] transition-all btn-press flex items-center justify-center gap-2"
                             >
-                                Pagar e Destacar <ChevronRight size={20} />
+                                Pay and Highlight <ChevronRight size={20} />
                             </button>
 
                             <button
                                 onClick={() => { setShowPromoteModal(false); navigate('/perfil'); }}
                                 className="w-full bg-transparent text-gray-500 py-3 rounded-full font-bold hover:bg-gray-50 transition-all btn-press"
                             >
-                                Publicar sem destaque
+                                Publish without highlight
                             </button>
                         </div>
                     </div>

@@ -75,7 +75,7 @@ const LoadingScreen = () => {
                     className="w-32 h-32 md:w-48 md:h-48 object-contain mb-4"
                 />
                 <h2 className="text-[#355130] text-xl md:text-2xl font-bold tracking-wide flex items-center gap-1">
-                    A carregar novo stock
+                    Loading new stock
                     <span className="flex gap-1 dot-loader">
                         <span className="animate-bounce delay-0">.</span>
                         <span className="animate-bounce delay-100">.</span>
