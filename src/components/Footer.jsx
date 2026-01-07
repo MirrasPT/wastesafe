@@ -12,35 +12,35 @@ const Footer = () => {
 
                 {/* Menu Columns */}
                 <div className="flex flex-col gap-5 items-center md:items-start">
-                    <h4 className="font-bold text-[#C9E26C] text-lg">Platform</h4>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Buy</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Sell</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Pricing & Plans</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Verified Companies</a>
+                    <h4 className="font-bold text-[#C9E26C] text-lg">Plataforma</h4>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Comprar</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Vender</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Preços e Planos</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Empresas Verificadas</a>
                 </div>
 
                 <div className="flex flex-col gap-5 items-center md:items-start">
-                    <h4 className="font-bold text-[#C9E26C] text-lg">Support</h4>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Help Center</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Posting Rules</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Dispute Resolution</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Contact Admin</a>
+                    <h4 className="font-bold text-[#C9E26C] text-lg">Suporte</h4>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Central de Ajuda</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Regras de Publicação</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Resolução de Disputas</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Contactar Admin</a>
                 </div>
 
                 <div className="flex flex-col gap-5 items-center md:items-start">
                     <h4 className="font-bold text-[#C9E26C] text-lg">Legal</h4>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Terms & Conditions</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Privacy Policy</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Complaints Book</a>
-                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Compliments Book</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Termos e Condições</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Política de Privacidade</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Livro de Reclamações</a>
+                    <a href="#" className="text-white/90 hover:text-[#C9E26C] transition-colors">Livro de Elogios</a>
                 </div>
 
             </div>
 
             <div className="waste-container border-t border-white/10 mt-16 pt-8 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-                <span>© 2025 Wastesafe. All rights reserved.</span>
+                <span>© 2025 Wastesafe. Todos os direitos reservados.</span>
                 <span className="flex items-center gap-1">
-                    Developed by <span className="text-[#C9E26C] font-semibold">Setup Tech</span>
+                    Desenvolvido por <span className="text-[#C9E26C] font-semibold">Setup Tech</span>
                 </span>
             </div>
         </footer>

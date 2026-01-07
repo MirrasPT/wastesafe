@@ -14,17 +14,18 @@ const Hero = () => {
                     {/* Text Content */}
                     <div className="max-w-3xl text-white space-y-6">
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                            Turn your <br />
+                            Transforme o seu <br />
                             <span className="text-[#F6EA37] relative inline-block">
                                 Dead Stock
                                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-waste-lime opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
                                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
                                 </svg>
                             </span> <br />
-                            into Profit
+                            em Lucro
                         </h1>
-                            The leading B2B Marketplace for the Textile Industry. Buy and sell raw materials, collection leftovers, and surplus safely.
-
+                        <p className="text-lg md:text-xl text-gray-200 font-light leading-relaxed">
+                            O Marketplace B2B líder para a Indústria Têxtil. Compra e venda matérias-primas, restos de coleção e excedentes com segurança.
+                        </p>
                     </div>
                 </div>
             </div>

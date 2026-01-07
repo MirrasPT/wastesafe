@@ -15,8 +15,8 @@ const Register = () => {
                     <div className="absolute top-0 right-0 w-40 h-40 bg-[#F6EA37]/20 rounded-bl-[150px] pointer-events-none" />
 
                     <div className="text-center mb-10 relative z-10">
-                        <h1 className="text-4xl font-bold text-[#355130] mb-3">Create Account</h1>
-                        <p className="text-gray-500 text-lg">Join the WasteSafe community.</p>
+                        <h1 className="text-4xl font-bold text-[#355130] mb-3">Criar Conta</h1>
+                        <p className="text-gray-500 text-lg">Junte-se à comunidade WasteSafe.</p>
                     </div>
 
                     <form className="space-y-6 relative z-10">
@@ -24,12 +24,12 @@ const Register = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Name Input */}
                             <div className="space-y-1 md:col-span-2">
-                                <label className="text-sm font-bold text-gray-700 ml-1">Name</label>
+                                <label className="text-sm font-bold text-gray-700 ml-1">Nome</label>
                                 <div className="relative">
                                     <User className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                                     <input
                                         type="text"
-                                        placeholder="John Doe or EcoTextil Ltd"
+                                        placeholder="João Silva ou EcoTextil Lda"
                                         className="w-full pl-12 pr-4 py-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#355130]/20 focus:border-[#355130] transition-all font-medium"
                                     />
                                 </div>
@@ -39,7 +39,7 @@ const Register = () => {
                             <div className="space-y-1">
                                 <label className="text-sm font-bold text-gray-700 ml-1">NIF</label>
                                 <div className="relative">
-                                    <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 font-bold text-xs">VAT</span>
+                                    <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 font-bold text-xs">NIF</span>
                                     <input
                                         type="text"
                                         placeholder="123456789"
@@ -50,7 +50,7 @@ const Register = () => {
 
                             {/* Phone Input */}
                             <div className="space-y-1">
-                                <label className="text-sm font-bold text-gray-700 ml-1">Mobile</label>
+                                <label className="text-sm font-bold text-gray-700 ml-1">Telemóvel</label>
                                 <div className="relative">
                                     <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 font-bold text-xs">+351</span>
                                     <input
@@ -76,7 +76,7 @@ const Register = () => {
 
                             {/* Address Input */}
                             <div className="space-y-1 md:col-span-2">
-                                <label className="text-sm font-bold text-gray-700 ml-1">Address / Location</label>
+                                <label className="text-sm font-bold text-gray-700 ml-1">Morada / Localidade</label>
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -108,7 +108,7 @@ const Register = () => {
 
                             {/* Confirm Password Input */}
                             <div className="space-y-1">
-                                <label className="text-sm font-bold text-gray-700 ml-1">Confirm Password</label>
+                                <label className="text-sm font-bold text-gray-700 ml-1">Confirmar Password</label>
                                 <div className="relative">
                                     <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                                     <input
@@ -124,13 +124,13 @@ const Register = () => {
                         <div className="flex items-start gap-3 mt-4">
                             <input type="checkbox" id="terms" className="mt-1 w-5 h-5 rounded border-gray-300 text-[#355130] focus:ring-[#355130] accent-[#355130]" />
                             <label htmlFor="terms" className="text-sm text-gray-500">
-                                I read and accept the <Link to="/termos" className="text-[#355130] font-bold hover:underline">Terms & Conditions</Link> and <Link to="/privacidade" className="text-[#355130] font-bold hover:underline">Privacy Policy</Link>.
+                                Li e aceito os <Link to="/termos" className="text-[#355130] font-bold hover:underline">Termos e Condições</Link> e a <Link to="/privacidade" className="text-[#355130] font-bold hover:underline">Política de Privacidade</Link>.
                             </label>
                         </div>
 
                         {/* Submit Button */}
                         <button className="w-full bg-[#355130] hover:bg-[#2a4126] text-white py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 group mt-4">
-                            Create Account
+                            Criar Conta
                             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </button>
 
@@ -138,7 +138,7 @@ const Register = () => {
 
                     <div className="mt-8 text-center relative z-10">
                         <p className="text-gray-500">
-                            Already have an account? <Link to="/login" className="font-bold text-[#355130] hover:underline">Login</Link>
+                            Já tem conta? <Link to="/login" className="font-bold text-[#355130] hover:underline">Entrar</Link>
                         </p>
                     </div>
 

@@ -13,10 +13,10 @@ const ForgotPassword = () => {
 
                     <div className="text-center mb-10 relative z-10">
                         <Link to="/login" className="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[#355130] mb-6 transition-colors">
-                            <ArrowLeft size={16} /> Back to Login
+                            <ArrowLeft size={16} /> Voltar ao Login
                         </Link>
-                        <h1 className="text-3xl font-bold text-[#355130] mb-3">Recover Password</h1>
-                        <p className="text-gray-500 text-lg">Enter your email to receive recovery instructions.</p>
+                        <h1 className="text-3xl font-bold text-[#355130] mb-3">Recuperar Password</h1>
+                        <p className="text-gray-500 text-lg">Insira o seu email para receber instruções de recuperação.</p>
                     </div>
 
                     <form className="space-y-6 relative z-10">
@@ -36,7 +36,7 @@ const ForgotPassword = () => {
 
                         {/* Submit Button */}
                         <button className="w-full bg-[#355130] hover:bg-[#2a4126] text-white py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 group">
-                            Send Email
+                            Enviar Email
                             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </button>
 

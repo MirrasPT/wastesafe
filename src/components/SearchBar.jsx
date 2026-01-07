@@ -3,9 +3,9 @@ import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const tabs = [
-    { id: 'materia-prima', label: 'Raw Material' },
-    { id: 'restos', label: 'Collection Leftovers' },
-    { id: 'defeitos', label: 'Defective Items' },
+    { id: 'materia-prima', label: 'Matéria-Prima' },
+    { id: 'restos', label: 'Restos de Coleção' },
+    { id: 'defeitos', label: 'Peças com Defeito' },
 ];
 
 const SearchBar = () => {
@@ -60,7 +60,7 @@ const SearchBar = () => {
                     <Tag className="text-[#355130]/50 mr-3" size={20} />
                     <input
                         type="text"
-                        placeholder="What are you looking for?"
+                        placeholder="O que procura?"
                         className="bg-transparent w-full outline-none text-[#355130] placeholder-[#355130]/50 font-medium"
                     />
                 </div>
@@ -70,7 +70,7 @@ const SearchBar = () => {
                     <MapPin className="text-[#355130]/50 mr-3" size={20} />
                     <input
                         type="text"
-                        placeholder="Location"
+                        placeholder="Localização"
                         className="bg-transparent w-full outline-none text-[#355130] placeholder-[#355130]/50 font-medium"
                     />
                 </div>
@@ -93,7 +93,7 @@ const SearchBar = () => {
                 {/* Search Button - Yellow (#F6EA37) */}
                 <Link to="/catalogo" className="bg-[#F6EA37] hover:bg-yellow-300 text-[#355130] font-bold px-8 py-3 md:py-4 rounded-full transition-all shadow-sm flex items-center justify-center gap-2 min-w-[160px] btn-press hover-glow">
                     <Search size={20} />
-                    <span>Search</span>
+                    <span>Pesquisar</span>
                 </Link>
             </div>
         </div>

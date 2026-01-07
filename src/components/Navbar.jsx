@@ -34,7 +34,7 @@ const Navbar = () => {
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center gap-8 text-waste-green-900 ml-auto mr-8">
                         <Link to="/catalogo" className="flex items-center gap-1 link-underline pb-1">
-                            Buy <ChevronDown size={16} />
+                            Comprar <ChevronDown size={16} />
                         </Link>
 
                         {/* Dropdown for Vender */}
@@ -44,7 +44,7 @@ const Navbar = () => {
                                 onMouseEnter={() => setDropdownOpen(true)}
                                 onClick={() => setDropdownOpen(!dropdownOpen)}
                             >
-                                Sell <ChevronDown size={16} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                                Vender <ChevronDown size={16} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
                             </button>
 
                             <div
@@ -53,16 +53,16 @@ const Navbar = () => {
                             >
                                 <div className="p-2 flex flex-col gap-1">
                                     <Link to="/como-vender" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#355130] rounded-xl transition-colors font-medium text-center">
-                                        How to Sell?
+                                        Como Vender?
                                     </Link>
                                     <Link to="/subscricoes" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#355130] rounded-xl transition-colors font-medium text-center">
-                                        Subscriptions
+                                        Subscrições
                                     </Link>
                                 </div>
                             </div>
                         </div>
                         <Link to="/sobre" className="link-underline pb-1">
-                            About Us
+                            Sobre Nós
                         </Link>
                     </div>
 
@@ -77,14 +77,14 @@ const Navbar = () => {
 
                 {/* Balloon 2: Publicar Anúncio (Desktop Only) */}
                 <Link to="/publicar" className="hidden md:flex bg-[#F6EA37] hover:bg-yellow-300 text-waste-green-900 rounded-full h-14 md:h-16 px-6 items-center gap-2 shadow-sm transition-transform whitespace-nowrap cursor-pointer btn-press">
-                    <span className="font-semibold hidden md:inline">Post Ad</span>
-                    <span className="font-semibold md:hidden">Post</span>
+                    <span className="font-semibold hidden md:inline">Publicar Anúncio</span>
+                    <span className="font-semibold md:hidden">Publicar</span>
                     <img src="/icons/Add.svg" alt="" className="w-5 h-5" />
                 </Link>
 
                 {/* Balloon 3: Profile (Desktop Only) */}
                 <Link to="/login" className="hidden md:flex bg-[#C9E26C] hover:bg-lime-300 text-waste-green-900 rounded-full h-14 md:h-16 w-14 md:w-16 items-center justify-center shadow-sm transition-transform cursor-pointer btn-press">
-                    <img src="/icons/Profile.svg" alt="Profile" className="w-5 h-5 md:w-6 md:h-6" />
+                    <img src="/icons/Profile.svg" alt="Perfil" className="w-5 h-5 md:w-6 md:h-6" />
                 </Link>
 
             </nav>
@@ -110,7 +110,7 @@ const Navbar = () => {
                 {/* Menu Content */}
                 <div className={`flex flex-col flex-1 p-6 transition-all duration-700 delay-100 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                     <div className="flex flex-col gap-8 items-center text-center text-3xl font-bold flex-1 justify-center w-full">
-                        <Link to="/catalogo" className="hover:text-[#C9E26C] transition-colors" onClick={() => setIsOpen(false)}>Buy</Link>
+                        <Link to="/catalogo" className="hover:text-[#C9E26C] transition-colors" onClick={() => setIsOpen(false)}>Comprar</Link>
 
                         {/* Mobile Vender Accordion */}
                         <div className="flex flex-col items-center w-full">
@@ -118,7 +118,7 @@ const Navbar = () => {
                                 onClick={() => setMobileVenderOpen(!mobileVenderOpen)}
                                 className="flex items-center gap-2 hover:text-[#C9E26C] transition-colors"
                             >
-                                Sell
+                                Vender
                                 <ChevronDown
                                     size={24}
                                     className={`transition-transform duration-300 ${mobileVenderOpen ? 'rotate-180' : ''}`}
@@ -131,28 +131,28 @@ const Navbar = () => {
                                     className="text-xl text-white/70 hover:text-[#C9E26C] font-medium"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    Guide: How to Sell
+                                    Guia: Como Vender
                                 </Link>
                                 <Link
                                     to="/subscricoes"
                                     className="text-xl text-white/70 hover:text-[#C9E26C] font-medium"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    Plans and Pricing
+                                    Planos e Preços
                                 </Link>
                             </div>
                         </div>
 
-                        <Link to="/sobre" className="hover:text-[#C9E26C] transition-colors" onClick={() => setIsOpen(false)}>About Us</Link>
+                        <Link to="/sobre" className="hover:text-[#C9E26C] transition-colors" onClick={() => setIsOpen(false)}>Sobre Nós</Link>
                     </div>
 
                     <div className="flex flex-col gap-4 mt-auto mb-8">
                         <Link to="/publicar" className="bg-[#F6EA37] text-[#355130] w-full py-4 rounded-full font-bold text-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2" onClick={() => setIsOpen(false)}>
-                            Post Ad
+                            Publicar Anúncio
                             <img src="/icons/Add.svg" alt="" className="w-5 h-5" />
                         </Link>
                         <Link to="/login" className="bg-[#C9E26C] text-[#355130] w-full py-4 rounded-full font-bold text-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2" onClick={() => setIsOpen(false)}>
-                            My Account
+                            A minha Conta
                             <img src="/icons/Profile.svg" alt="" className="w-5 h-5" />
                         </Link>
                     </div>

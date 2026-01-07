@@ -4,7 +4,7 @@ const Categories = () => {
         <section className="py-16 md:py-24 relative z-10 overflow-hidden">
 
             <div className="waste-container space-y-8">
-                <h2 className="text-3xl md:text-5xl font-bold text-[#355130]">Explore by Category</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-[#355130]">Explore por Categoria</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[500px]">
 
@@ -16,7 +16,7 @@ const Categories = () => {
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80" />
-                        <h3 className="absolute bottom-6 left-8 text-white text-2xl md:text-3xl font-bold">Raw Material</h3>
+                        <h3 className="absolute bottom-6 left-8 text-white text-2xl md:text-3xl font-bold">Matéria-Prima</h3>
                     </div>
 
                     {/* Right Column Container for stacked items */}
@@ -30,7 +30,7 @@ const Categories = () => {
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80" />
-                            <h3 className="absolute bottom-5 left-6 text-white text-xl font-bold">Collection Leftovers</h3>
+                            <h3 className="absolute bottom-5 left-6 text-white text-xl font-bold">Restos de Coleção</h3>
                         </div>
 
                         {/* Lower Small Item: Peças com Defeito */}
@@ -41,7 +41,7 @@ const Categories = () => {
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80" />
-                            <h3 className="absolute bottom-5 left-6 text-white text-xl font-bold">Defective Items</h3>
+                            <h3 className="absolute bottom-5 left-6 text-white text-xl font-bold">Peças com Defeito</h3>
                         </div>
 
                     </div>
