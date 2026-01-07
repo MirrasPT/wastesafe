@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-waste-light font-sans overflow-x-hidden;
+    color: #121212;
+  }
+}
+
+
+@layer utilities {
+  .waste-container {
+    @apply w-[95%] max-w-7xl mx-auto;
+  }
+
+  /* Micro-interactions */
+  .btn-press {
+    @apply active:scale-95 transition-transform duration-200 ease-out;
+  }
+
+  .hover-card {
+    @apply hover:scale-[1.01] hover:shadow-xl transition-all duration-300 ease-in-out will-change-transform;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(53, 81, 48, 0.3);
+  }
+
+  .link-underline {
+    @apply relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* Loading Screen Animations */
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-slide-right {
+  animation: slide-right 2s linear infinite;
+}
+
+.animate-slide-left {
+  animation: slide-left 2.5s linear infinite;
+}
+
+.animate-slide-down {
+  animation: slide-down 3s linear infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 3.5s linear infinite;
+}
+
+.animate-slide-right-slow {
+  animation: slide-right 15s linear infinite;
+}
+
+.animate-slide-left-slow {
+  animation: slide-left 18s linear infinite;
+}
+
+.animate-slide-right-slower {
+  animation: slide-right 25s linear infinite;
+}
+
+/* GSAP Line specific styles if needed */
+.draw-path {
+  /* visibility: hidden; */
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
